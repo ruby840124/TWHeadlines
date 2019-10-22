@@ -1,9 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## TWHeadlines website
 ▶get the headlines of Taiwan in 3 categories using the Top Headlines API in the references.<br>
 ▶label each item its category.<br>
 ▶sort the result by publishedAt.<br>
+▶使用fetch API 進行練習<br>
 
 ▶Using API:<br>
 https://newsapi.org/docs/endpoints/top-headlines<br>
