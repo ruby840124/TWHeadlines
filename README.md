@@ -1,9 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## TWHeadlines website
-*get the headlines of Taiwan in 3 categories using the Top Headlines API in the references.
-*label each item its category.
-*sort the result by publishedAt.
+<br>
+▶▶get the headlines of Taiwan in 3 categories using the Top Headlines API in the references.<br>
+▶▶label each item its category.<br>
+▶▶sort the result by publishedAt.<br>
 
 
 ### `yarn start`
