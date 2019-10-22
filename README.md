@@ -5,6 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ▶label each item its category.<br>
 ▶sort the result by publishedAt.<br>
 
+▶Using API:<br>
+https://newsapi.org/docs/endpoints/top-headlines
+
 
 ### `yarn start`
 
