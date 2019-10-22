@@ -6,9 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ▶sort the result by publishedAt.<br>
 
 ▶Using API:<br>
-https://newsapi.org/docs/endpoints/top-headlines
+https://newsapi.org/docs/endpoints/top-headlines<br>
 
-
+<img src="https://github.com/ruby840124/TWHeadlines/blob/master/image/website.JPG" width="75%" height="75%"> <br>
 ### `yarn start`
 
 Runs the app in the development mode.<br />
