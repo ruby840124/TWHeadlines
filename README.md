@@ -8,10 +8,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ▶Using API:<br>
 https://newsapi.org/docs/endpoints/top-headlines<br>
 
-### `頁面瀏覽`
+### `頁面瀏覽-娛樂版`
 此為頁面瀏覽的樣子<br>
 <img src="https://github.com/ruby840124/TWHeadlines/blob/master/image/website.JPG" width="75%" height="75%"> <br>
 
 ### `類別`
 共有五種類別頁面選擇 - 娛樂、運動、科技、企業、全部<br>
 <img src="https://github.com/ruby840124/TWHeadlines/blob/master/image/website2.JPG" width="75%" height="75%"> <br>
+
+### `頁面瀏覽-運動版`
+<img src="https://github.com/ruby840124/TWHeadlines/blob/master/image/website3.JPG" width="75%" height="75%"> <br>
