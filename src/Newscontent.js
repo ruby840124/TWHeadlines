@@ -24,7 +24,7 @@ class Newscontent extends React.Component{
         timeArray.push(Time);
     }); 
     const listItems = articles.map((val,index) =>
-      <div className="list_css">
+      <div className="list_css" id={index}>
         <div style={{width:"40%",textAlign:"center"}}>
           <img  src={val.urlToImage} style={{padding:"0.5vh"}} width="70%" height="70%"/>
         </div>
@@ -33,7 +33,7 @@ class Newscontent extends React.Component{
             <a href={val.url} style={{color:"black",fontSize:"1.3vw"}} >{val.title}</a>
           </div><br/>
           <div>{val.description}</div><br/>
-          <div style={{color:"#CA8EFF",textAlign:"right"}}>({this.props.value})</div>
+          <div style={{color:"#CA8EFF",textAlign:"right"}}>({val.category})</div>
           <div style={{color:"#FF7575",textAlign:"right"}}>{val.author!=null?val.author+" 報導" :''}</div>
           <div style={{color:"#0066CC",textAlign:"right"}}>{timeArray[index]}</div>
         </div>
