@@ -20,13 +20,8 @@ class Main extends React.Component{
         this.setState({categoryValue:"science"});
     }else if(event.target.value=="sports"){
         this.setState({categoryValue:"sports"});
-<<<<<<< HEAD
     }else if(event.target.value=="health"){
         this.setState({categoryValue:"health"});
-=======
-    }else if(event.target.value=="business"){
-        this.setState({categoryValue:"business"});
->>>>>>> f4e9c97c83906bc33216afe4d22fc888ebd56617
     }else{
         this.setState({categoryValue:"all"});
     }
