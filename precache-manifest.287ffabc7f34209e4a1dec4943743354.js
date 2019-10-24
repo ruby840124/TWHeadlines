@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4a85b2e96a77e06c01e6689cf4272998",
+    "revision": "d995b5638884f6527854d21ee3609ab9",
     "url": "/TWHeadlines/index.html"
   },
   {
-    "revision": "8a83dd488656a4169a14",
+    "revision": "2c4e6d2431ece728613a",
     "url": "/TWHeadlines/static/css/main.f82b9b22.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TWHeadlines/static/js/2.7ca2f5a8.chunk.js"
   },
   {
-    "revision": "8a83dd488656a4169a14",
-    "url": "/TWHeadlines/static/js/main.7ce4e0af.chunk.js"
+    "revision": "2c4e6d2431ece728613a",
+    "url": "/TWHeadlines/static/js/main.43da10ea.chunk.js"
   },
   {
     "revision": "56198b586ced56f0308c",
