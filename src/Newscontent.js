@@ -34,12 +34,11 @@ class Newscontent extends React.Component{
       });
     })
 
-    //擷取完API結果
+    //擷取完API作處理
     promise.then( value => {
       articles.sort(function(a,b){  //時間順序排列(最新到最舊)
         return Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
       });
-      console.log(articles);
       this.setState({articles:articles,page:page});
     }, function(reason) {
       console.log(reason);
@@ -60,11 +59,11 @@ class Newscontent extends React.Component{
   onScrollHandle = event => {
     const list = this.refs.list; //利用ref取得list物件
     const change = false; //跟滾輪的fetch API區別
-    if (Math.floor(window.scrollY + window.innerHeight) == Math.floor(list.clientHeight + list.offsetTop +10)) {
-      console.log(window.scrollY);
-      console.log(window.innerHeight);
-      console.log(list.clientHeight);
-      console.log(list.offsetTop);
+    console.log(window.scrollY);
+    console.log(window.innerHeight);
+    console.log(list.clientHeight);
+    console.log(list.offsetTop);
+    if (Math.floor(window.scrollY + window.innerHeight)+1 > Math.floor(list.clientHeight + list.offsetTop +10)) {
       if(this.state.page<5){ //API頁面只有到4頁，超過沒有回傳值
         this.fetchAPI(this.props.categoryValue,change);
     }
