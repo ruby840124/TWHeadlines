@@ -60,7 +60,7 @@ class Newscontent extends React.Component{
   onScrollHandle = event => {
     const list = this.refs.list; //利用ref取得list物件
     const change = false; //跟滾輪的fetch API區別
-    if (parseInt(window.scrollY) + window.innerHeight == list.clientHeight + list.offsetTop+10) {
+    if (Math.floor(window.scrollY + window.innerHeight) == Math.floor(list.clientHeight + list.offsetTop +10)) {
       console.log(window.scrollY);
       console.log(window.innerHeight);
       console.log(list.clientHeight);
