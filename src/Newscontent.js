@@ -11,7 +11,7 @@ class Newscontent extends React.Component{
     let category = [];
     let page = this.state.page+1;
     let articles = this.state.articles;
-    if(change){
+    if(change){ 
       page = 1;
       articles=[];
     }
@@ -41,9 +41,19 @@ class Newscontent extends React.Component{
       });
       this.setState({articles:articles,page:page});
     }, function(reason) {
-      console.log(reason);
+      console.log(reason); //錯誤提醒
     });
   }
+
+  onScrollHandle = event => {
+    const list = this.refs.list; //利用ref取得list物件
+    const change = false; //跟滾輪的fetch API區別
+    if (Math.ceil(window.scrollY + window.innerHeight)+1 > list.clientHeight + list.offsetTop +10) {
+      if(this.state.page<5){ //API頁面只有到4頁，超過沒有回傳值
+        this.fetchAPI(this.props.categoryValue,change);
+    }
+  }}
+
 
   //執行於元件第一次render到畫面的時間點
   componentWillMount() {
@@ -53,25 +63,10 @@ class Newscontent extends React.Component{
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScrollHandle);
-    clearInterval(this.timerID);
   }
-
-  onScrollHandle = event => {
-    const list = this.refs.list; //利用ref取得list物件
-    const change = false; //跟滾輪的fetch API區別
-    console.log(window.scrollY);
-    console.log(window.innerHeight);
-    console.log(list.clientHeight);
-    console.log(list.offsetTop);
-    if (Math.floor(window.scrollY + window.innerHeight)+1 > Math.floor(list.clientHeight + list.offsetTop +10)) {
-      if(this.state.page<5){ //API頁面只有到4頁，超過沒有回傳值
-        this.fetchAPI(this.props.categoryValue,change);
-    }
-  }}
-
+  
   //執行於re-render更新完後的時間點
   componentDidUpdate(prevProps){
-    //比較狀態，不然會進入無限迴圈(setState設到))
     if(this.props.categoryValue!=prevProps.categoryValue){
       const change = true; //跟滾輪的fetch API區別
       this.fetchAPI(this.props.categoryValue,change);
