@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TWHeadlines/static/css/main.f82b9b22.chunk.css",
-    "main.js": "/TWHeadlines/static/js/main.39ea20b0.chunk.js",
-    "main.js.map": "/TWHeadlines/static/js/main.39ea20b0.chunk.js.map",
+    "main.js": "/TWHeadlines/static/js/main.dbb17c61.chunk.js",
+    "main.js.map": "/TWHeadlines/static/js/main.dbb17c61.chunk.js.map",
     "runtime-main.js": "/TWHeadlines/static/js/runtime-main.2a790979.js",
     "runtime-main.js.map": "/TWHeadlines/static/js/runtime-main.2a790979.js.map",
     "static/js/2.7ca2f5a8.chunk.js": "/TWHeadlines/static/js/2.7ca2f5a8.chunk.js",
     "static/js/2.7ca2f5a8.chunk.js.map": "/TWHeadlines/static/js/2.7ca2f5a8.chunk.js.map",
     "index.html": "/TWHeadlines/index.html",
-    "precache-manifest.76658d4538fe847ef9a7be4eb24263cc.js": "/TWHeadlines/precache-manifest.76658d4538fe847ef9a7be4eb24263cc.js",
+    "precache-manifest.c0d155dca56a2f75fda439d5d11a25ac.js": "/TWHeadlines/precache-manifest.c0d155dca56a2f75fda439d5d11a25ac.js",
     "service-worker.js": "/TWHeadlines/service-worker.js",
     "static/css/main.f82b9b22.chunk.css.map": "/TWHeadlines/static/css/main.f82b9b22.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.2a790979.js",
     "static/js/2.7ca2f5a8.chunk.js",
     "static/css/main.f82b9b22.chunk.css",
-    "static/js/main.39ea20b0.chunk.js"
+    "static/js/main.dbb17c61.chunk.js"
   ]
 }
