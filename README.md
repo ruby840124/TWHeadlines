@@ -24,3 +24,7 @@ https://newsapi.org/docs/endpoints/top-headlines<br>
 
 ### `DEMO 網址`
 https://ruby840124.github.io/TWHeadlines/
+
+### `相似練習`
+https://github.com/ruby840124/InfiniteScroller
+<img src="https://github.com/ruby840124/InfiniteScroller/blob/master/img/cat1.JPG" width="75%" height="75%"> <br>
