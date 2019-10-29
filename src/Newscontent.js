@@ -3,43 +3,51 @@ import React from 'react';
 class Newscontent extends React.Component{
   constructor(props) {
         super(props);
-        this.state={articles:[],page:0};
+        this.state={articles:[],page:1};
   }
 
   //擷取API數據
   fetchAPI(val,change){
     let category = [];
-    let page = this.state.page+1;
+    let categoryLength = 0;
+    let page = this.state.page;
     let articles = this.state.articles;
+    let nowcategory = []; //用來判斷目前map讀到哪，如果讀取完則進行後續API處理
     if(change){ 
       page = 1;
       articles=[];
     }
+
     (val=="all"? category = ["entertainment","science","sports","health"]:category=[val]);
+    (val=="all"? categoryLength=4 :categoryLength=1);
     const promise = new Promise((resolve, reject) => {
       const API = 'https://newsapi.org/v2/top-headlines?country=tw&';
-      const APIkey = '&apiKey=27539d215b7745149d29a69402f930a6';
+      const APIkey = '&apiKey=b6a64708a32040ec9761ccf7a11c83a5';
       category.map((val) =>{
       const category = val;
       const DEFAULT_QUERY ='category='+val;
       fetch(API + DEFAULT_QUERY+APIkey+"&page="+page+"&pagesize=5")
       .then(response => response.json())
       .then(data => {
+        nowcategory.push(val);
         data.articles.map((val) =>{
           val.category = category;
           articles.push(val);
-          resolve(articles);
+          });
+          if(nowcategory.length==categoryLength){
+            resolve(articles);
+          }
         });
-      });
       });
     })
 
     //擷取完API作處理
-    promise.then( value => {
+    promise.then(value => {
       articles.sort(function(a,b){  //時間順序排列(最新到最舊)
         return Date.parse(b.publishedAt) - Date.parse(a.publishedAt);
       });
-      this.setState({articles:articles,page:page});
+      console.log(value);
+      this.setState({articles:articles,page:page+1});
     }, function(reason) {
       console.log(reason); //錯誤提醒
     });
@@ -49,7 +57,7 @@ class Newscontent extends React.Component{
     const list = this.refs.list; //利用ref取得list物件
     const change = false; //跟滾輪的fetch API區別
     if (Math.ceil(window.scrollY + window.innerHeight)+1 > list.clientHeight + list.offsetTop +10) {
-      if(this.state.page<5){ //API頁面只有到4頁，超過沒有回傳值
+      if(this.state.page <= 5){ //API頁面只有到4頁，超過沒有回傳值
         this.fetchAPI(this.props.categoryValue,change);
     }
   }}
