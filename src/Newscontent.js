@@ -1,5 +1,5 @@
 import React from 'react';
-
+import cat from './cat.jpg';
 class Newscontent extends React.Component{
   constructor(props) {
         super(props);
@@ -101,7 +101,7 @@ class Newscontent extends React.Component{
     const listItems = articles.map((val,index) =>
     <div className="list_css" key={index}>
       <div style={{width:"40%",textAlign:"center"}}>
-        {(val.urlToImage==null?<p>~無圖片QAQ~</p>:<img  src={val.urlToImage} style={{padding:"0.5vh"}} width="70%" height="70%"/>)}
+        {(val.urlToImage==null?<img  src="https://upload.cc/i1/2019/10/29/z5NH9C.jpg" style={{padding:"0.5vh"}} width="70%" height="70%"/>:<img  src={val.urlToImage} style={{padding:"0.5vh"}} width="70%" height="70%" onError={(e)=>{e.target.onerror = null; e.target.src="https://upload.cc/i1/2019/10/29/z5NH9C.jpg"}}/>)}
       </div>
       <div className="content">
         <div style={{textAlign:"center"}}>
